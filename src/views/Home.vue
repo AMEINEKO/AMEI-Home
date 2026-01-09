@@ -565,6 +565,19 @@ onBeforeUnmount(() => {
                   Blog
                 </a-button>
               </a-space>
+              <div class="fun-section">
+                <a-typography-title :level="4" class="fun-title">好玩的东西</a-typography-title>
+                <a-space size="small" wrap class="fun-actions">
+                  <a-button
+                    shape="round"
+                    href="https://www.bigtech-simulator.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    互联网大厂模拟器
+                  </a-button>
+                </a-space>
+              </div>
             </a-space>
           </a-col>
         </a-row>
@@ -792,6 +805,37 @@ onBeforeUnmount(() => {
   border-color: rgba(154, 220, 210, 1);
 }
 
+.fun-section {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.fun-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+  font-weight: 500;
+  text-align: left;
+}
+
+.fun-actions {
+  width: 100%;
+}
+
+.fun-actions :deep(.ant-btn) {
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--muted);
+  background: rgba(10, 12, 16, 0.45);
+  box-shadow: none;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.fun-actions :deep(.ant-btn:hover) {
+  color: var(--text);
+  border-color: rgba(154, 220, 210, 0.6);
+  background: rgba(154, 220, 210, 0.12);
+}
+
 .hero-title {
   display: inline-block;
   font-family: 'Shippori Mincho', 'Times New Roman', serif;
@@ -849,6 +893,14 @@ onBeforeUnmount(() => {
   .hero-actions {
     justify-content: center;
   }
+
+  .fun-title {
+    text-align: center;
+  }
+
+  .fun-actions {
+    justify-content: center;
+  }
 }
 
   @media (max-width: 600px) {
@@ -882,6 +934,11 @@ onBeforeUnmount(() => {
   }
 
   .hero-actions :deep(.ant-btn) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fun-actions :deep(.ant-btn) {
     width: 100%;
     justify-content: center;
   }

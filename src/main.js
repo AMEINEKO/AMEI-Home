@@ -4,6 +4,4 @@ import 'ant-design-vue/dist/reset.css'
 import './style.css'
 import App from './App.vue'
 
-const app = createApp(App)
-app.use(Antd)
-app.mount('#app')
+createApp(App).use(Antd).mount('#app')

@@ -124,17 +124,16 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <main class="page">
-      <a-card id="hero" class="hero-card" :bordered="false" hoverable>
+      <a-card class="hero-card" :bordered="false" hoverable>
         <a-row :gutter="[24, 24]" align="middle">
           <a-col :xs="24" :sm="7" :md="5">
-            <div class="hero-avatar">
-              <a-avatar
-                :size="96"
-                shape="square"
-                src="https://tc.azuneko.com/i/2026/03/24/3kpedj.webp"
-                alt="AMEI avatar"
-              />
-            </div>
+            <a-avatar
+              class="hero-avatar"
+              :size="96"
+              shape="square"
+              src="https://tc.azuneko.com/i/2026/03/24/3kpedj.webp"
+              alt="AMEI avatar"
+            />
           </a-col>
           <a-col :xs="24" :sm="17" :md="19">
             <a-space direction="vertical" size="middle" class="hero-content">
@@ -231,24 +230,14 @@ onBeforeUnmount(() => {
 .hero-avatar {
   width: 96px;
   height: 96px;
-  border-radius: 32px;
-  padding: 4px;
-  background: linear-gradient(140deg, rgba(154, 220, 210, 0.65), rgba(184, 166, 255, 0.55));
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
-  display: grid;
-  place-items: center;
-}
-
-.hero-avatar :deep(.ant-avatar) {
-  width: 100%;
-  height: 100%;
   border-radius: 26px;
-  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+  display: block;
   overflow: hidden;
+  margin-left: 3px;
 }
 
-.hero-avatar :deep(.ant-avatar img) {
+.hero-avatar :deep(img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -361,11 +350,8 @@ onBeforeUnmount(() => {
     width: 80px;
     height: 80px;
     border-radius: 26px;
-    transform: translateX(-8px);
-  }
-
-  .hero-avatar :deep(.ant-avatar) {
-    border-radius: 22px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-title {

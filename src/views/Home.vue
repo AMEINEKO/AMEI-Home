@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-const stage = ref('ready')
+const stage = ref('loading')
 const powReady = ref(false)
 const powStatus = ref('正在执行访问校验…')
 const powProgress = ref(0)
